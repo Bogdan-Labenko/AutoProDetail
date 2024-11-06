@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+}
+:root{
+    --red: #ee3d33;
+    --dar-red: #a21b1e;
+    --grey: #c8c9cb;
+}
+header{
+    background-color: black;
+    height: 80px;
+}
+.logo{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.menu{
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.lang{
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse
+}
+.lang button{
+    background-color: black;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin: 5px;
+}
+.lang img{
+    width: 40px;
+    background-color: black;
+}
+.logo img{
+    height: 100%;
+}
+footer{
+    clear: both;
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+}
+.contacts-footer{
+    display: flex;
+    clear: both;
+}
+.social-media-icon img{
+    width: 50px;
+}
+.logo-footer{
+    float: left;
+}
+.logo-footer img{
+    height: 50px;
+}
+a{
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid white;
+    color: var(--grey);
+    margin: 5px;
+}
+a:hover{
+    color: white;
+}
