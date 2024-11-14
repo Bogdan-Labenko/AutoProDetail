@@ -1,5 +1,26 @@
 {
     "menu-1": "Główna",
-    "menu-2": "Kontakty",
-    "menu-3": "O nas"
+    "menu-2": "Usługi",
+    "menu-3": "Realizacje",
+    "menu-4": "O nas",
+    "menu-5": "Kontakty",
+    "title-1": "AutoDetailing",
+    "title-2": "Nadaj swojemu samochodowi wyjątkowy blask z ",
+    "title-3-1": "Auto ",
+    "title-3-2": "Pro ",
+    "title-3-3": "Detail",
+    "s1-btn-1": "Usługi",
+    "s1-btn-2": "Kontakt",
+    "s2-title": "Usługi, które świadczymy",
+    "service-1-1": "Mycie i polerowanie",
+    "service-1-2": "Dokładnie czyścimy karoserię, koła i nadkola, usuwając wszelkie zanieczyszczenia i kurz bezpiecznymi środkami, które chronią lakier oraz powłoki ochronne. Następnie polerujemy karoserię, przywracając jej blask, usuwając drobne zarysowania i utlenienia, co nadaje świeży wygląd i zapewnia ochronę przed wpływem czynników zewnętrznych.",
+    "service-2-1": "Czyszczenie wnętrz",
+    "service-2-2": "Kompleksowe czyszczenie wszystkich wewnętrznych powierzchni, w tym dywaników, siedzeń, deski rozdzielczej i tapicerki drzwi. Używamy profesjonalnego sprzętu i bezpiecznych środków do usuwania plam, zapachów i kurzu, zapewniając świeżość i komfort we wnętrzu pojazdu.",
+    "service-3-1": "Oklejanie folią",
+    "service-3-2": "Folia ochronna (PPF): Przezroczysta folia, która chroni lakier samochodu przed zarysowaniami, odpryskami i uszkodzeniami. Idealna dla zachowania doskonałego stanu karoserii.",
+    "service-4-1": "Powłoka ceramiczna",
+    "service-4-2": "Nałożenie powłoki ceramicznej tworzy warstwę ochronną, która zwiększa odporność powierzchni samochodu na zabrudzenia i zarysowania. Powłoka zapewnia głęboki blask i właściwości hydrofobowe, co ułatwia pielęgnację samochodu i zachowanie jego estetycznego wyglądu na dłużej",
+    "service-5-1": "Naprawy blacharskie",
+    "service-5-2": "Naprawa wgnieceń i zarysowań: Odbudowujemy karoserię po uszkodzeniach powstałych na skutek kolizji lub innych czynników. Nasi specjaliści usuwają wgniecenia, zarysowania i inne defekty, przywracając samochodowi pierwotny wygląd.",
+    "footer-description": "To jest opis stopki informujący o naszej firmie."
 }

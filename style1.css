@@ -1,0 +1,306 @@
+:root{
+    --red: #ee3d33;
+    --dark-red: #a21b1e;
+    --black-cherry: #470a0a;
+    --light-gray: #f2f2f2;
+    --gray: #c8c9cb;
+    --dark-gray: #484848;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    flex: 1;
+    max-width: 230px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex: 2;
+}
+
+.contacts{
+    color: white;
+    display: flex;
+    flex-flow: column;
+    flex: 0.5;
+    gap: 5px;
+    align-items: center;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+.lang button {
+    background-color: black;
+    border: none;
+    outline: none;
+    width: 27px;
+}
+
+.lang img {
+    width: 25px;
+}
+
+.lang img:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.logo-footer img {
+    height: 40px;
+}
+
+.social-media-footer {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media-footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.social-media-footer a {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+.footer-bottom{
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--light-gray);
+    line-height: 100%;
+}
+
+header a {
+    text-decoration: none;
+    padding: 10px;
+    /* border: 1px solid var(--grey);
+    border-radius: 10%; */
+    color: var(--light-gray);
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: var(--red);
+}
+
+.main{
+    margin-top: 80px;
+    height: fit-content;
+    text-align: center;
+    
+}
+
+.section-1 h2, .section-1 h3{
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 350%;
+    max-width: 45%;
+}
+
+.section-1{
+    margin-top: 80px;
+    padding-top: 150px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),    
+        url(media/deteiling_audi1.jpg);
+    background-size: cover; /* Подгоняет изображение под размер блока, сохраняя пропорции */
+    background-repeat: no-repeat;
+    background-position: center; /* Центрирует изображение */
+    width: 100%; /* Ширина на всю страницу */
+    height: 100vh; /* Высота на весь экран */
+}
+
+
+.title-1{
+    color: white;
+    font-size: 600% !important;
+}
+
+.section-1 h3{
+    font-size: 250%;
+}
+
+.gray-gradient{
+    background-image: linear-gradient(to bottom, white, var(--gray));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.red-gradient{
+    background-image: linear-gradient(to bottom, var(--red), var(--dark-red));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.red-first-gradient::first-letter{
+    background-image: linear-gradient(to bottom, var(--red), var(--dark-red));
+    -webkit-background-clip: text; /* Для Safari */
+    background-clip: text; /* Для других браузеров */
+    color: transparent; /* Делаем сам текст прозрачным, чтобы был виден только градиент */
+}
+
+.s1-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    vertical-align: center;
+    margin-top: 20px;
+}
+
+.s1-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width: 7%;
+    height: 50px;
+    font-size: 120%;
+    font-weight: 550;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.s1-btn:hover{
+    width: 7.2%;
+}
+
+.s1-btn-1{
+    background-color: var(--dark-red);
+    color: white;
+}
+
+.s1-btn-2{
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+.section-2{
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(#010101 10%, black);
+}
+
+.s2-title{
+    padding-top: 25px;
+    font-size: 250%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 20%;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: fit-content;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    padding: 20px;
+    background-image: linear-gradient(to bottom, var(--red), var(--dark-red));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 2px solid var(--dark-red);
+    position: relative;
+    height: fit-content;
+}
+
+.card-header::after {
+    content: '\2193'; /* Unicode стрелка вниз */
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-header.active::after {
+    transform: translateY(-50%) rotate(180deg); /* Поворот стрелки */
+}
+
+.card-description {
+    display: none;
+    padding: 15px;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.card.active .card-description {
+    display: block;
+}

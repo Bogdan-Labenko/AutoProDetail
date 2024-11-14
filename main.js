@@ -30,3 +30,22 @@ if (cookie) {
 else{
     setLanguage('pl');
 }
+
+function toggleCard(event) {
+  const cardHeader = event.currentTarget;
+  const card = cardHeader.closest('.card');
+  
+  // const allCards = document.querySelectorAll('.card');
+  // allCards.forEach((otherCard) => {
+  //     if (otherCard !== card) {
+  //         otherCard.classList.remove('active');
+  //     }
+  // });
+
+  card.classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cardHeaders = document.querySelectorAll('.card-header');
+  cardHeaders.forEach(header => header.addEventListener('click', toggleCard));
+});

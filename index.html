@@ -3,39 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <title>Auto Pro Detail</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="media/logo.png" alt="logo">
-        </div>
+        <a href="/" class="logo">
+            <img src="media/logo1.png" alt="logo">
+        </a>
         <div class="menu">
-            <a data-i18n="menu-1" href="/"></a>
-            <a data-i18n="menu-2" href="contacts"></a>
-            <a data-i18n="menu-3" href="info"></a>
+            <a data-i18n="menu-1" href="#start"></a>
+            <a data-i18n="menu-2" href="#services"></a>
+            <a data-i18n="menu-3" href="#realizations"></a>
+            <a data-i18n="menu-4" href="#info"></a>
+            <a data-i18n="menu-5" href="#contacts"></a>
+        </div>
+        <div class="contacts">
+            <p class="phone"><span class="red-gradient">+48</span> <span class="gray-gradient">510-401-671</span></p>
+            <p class="phone"><span class="red-gradient">+48</span> <span class="gray-gradient">788-667-311</span></p>
         </div>
         <div class="lang">
-            <button style="border: none; outline: none;" onclick="setLanguage('pl')">
-                <img src="media/poland.png" alt="poland">
-            </button>
             <button onclick="setLanguage('ua')">
                 <img src="media/ukraine.png" alt="ukraine">
             </button>
+            <button onclick="setLanguage('pl')">
+                <img src="media/poland.png" alt="poland">
+            </button>
         </div>
     </header>
-    <!-- <footer>
+    <section id="start" class="main">
+        <div class="section-1">
+            <h2 class="title-1 red-gradient" data-i18n="title-1"></h2>
+            <h3>
+                <span class="gray-gradient" data-i18n="title-2"></span>
+                <div style="display: inline-block;" class="red-gradient" data-i18n="title-3-1"></div>
+                <div style="display: inline-block;" class="gray-gradient" data-i18n="title-3-2"></div>
+                <div style="display: inline-block;" class="gray-gradient" data-i18n="title-3-3"></div>
+            </h3>
+            <div class="s1-buttons">
+                <a class="s1-btn s1-btn-1" href="#services">
+                    <div data-i18n="s1-btn-1" class="gray-gradient"></div>
+                </a>
+                <a class="s1-btn s1-btn-2" href="#contacts">
+                    <div data-i18n="s1-btn-2" class="gray-gradient"></div>
+                </a>
+            </div>
+        </div>
+        <div id="services" class="section-2">
+            <h1 class="s2-title red-gradient" data-i18n="s2-title"></h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-header" data-i18n="service-1-1"></div>
+                    <div class="card-description" data-i18n="service-1-2"></div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-i18n="service-2-1"></div>
+                    <div class="card-description" data-i18n="service-2-2"></div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-i18n="service-3-1"></div>
+                    <div class="card-description" data-i18n="service-3-2"></div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-i18n="service-4-1"></div>
+                    <div class="card-description" data-i18n="service-4-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
         <div class="logo-footer">
-            <img src="media/logo.png" alt="logo">
+            <img src="media/logo1.png" alt="logo">
         </div>
-        <div class="footer-menu">
-            <a data-i18n="menu-1" href="/"></a>
-            <a data-i18n="menu-2" href="contacts"></a>
-            <a data-i18n="menu-3" href="info"></a>
-        </div>
-        <hr style="clear: both; width: 80%;">
-        <div class="contacts-footer">
+        <p data-i18n="footer-description" class="footer-description" style="color: white;"></p>
+        <div class="social-media-footer">
             <a href="https://facebook.com" target="_blank" class="social-media-icon">
                 <img src="media/facebook.png" alt="facebook-icon">
             </a>
@@ -43,10 +84,13 @@
                 <img src="media/instagram.png" alt="instagram-icon">
             </a>
             <a href="https://tiktok.com" target="_blank" class="social-media-icon">
-                <img src="media/tiktok.png" alt="tiktok-icon">
+                <img src="media/tik-tok.png" alt="tiktok-icon">
             </a>
         </div>
-    </footer> -->
+        <div class="footer-bottom">
+            <p>©2024-2025 Auto Pro Detail. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
