@@ -11,12 +11,20 @@
         <a href="/" class="logo">
             <img src="media/logo1.png" alt="logo">
         </a>
-        <div class="menu">
-            <a data-i18n="menu-1" href="#start"></a>
-            <a data-i18n="menu-2" href="#services"></a>
-            <a data-i18n="menu-3" href="#realizations"></a>
-            <a data-i18n="menu-4" href="#info"></a>
-            <a data-i18n="menu-5" href="#contacts"></a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+            <a data-i18n="menu-1" onclick="toggleMenu()" href="#start"></a>
+            <a data-i18n="menu-2" onclick="toggleMenu()" href="#services"></a>
+            <a data-i18n="menu-3" onclick="toggleMenu()" href="#realizations"></a>
+            <a data-i18n="menu-5" onclick="toggleMenu()" href="#contacts"></a>
+            <div class="lang">
+                <button onclick="setLanguage('ua')">
+                    <img src="media/ukraine.png" alt="ukraine">
+                </button>
+                <button onclick="setLanguage('pl')">
+                    <img src="media/poland.png" alt="poland">
+                </button>
+            </div>
         </div>
         <div class="contacts">
             <p class="phone"><span class="red-gradient">+48</span> <span class="gray-gradient">510-401-671</span></p>
@@ -50,51 +58,86 @@
             </div>
         </div>
         <div id="services" class="section-2">
-            <h1 class="s2-title red-gradient" data-i18n="s2-title"></h1>
+            <h1 class="title-2 red-gradient" data-i18n="s2-title"></h1>
             <div class="card-container">
-                <div class="card">
+                <div class="card active">
                     <div class="card-header" data-i18n="service-1-1"></div>
                     <div class="card-description" data-i18n="service-1-2"></div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <div class="card-header" data-i18n="service-2-1"></div>
                     <div class="card-description" data-i18n="service-2-2"></div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <div class="card-header" data-i18n="service-3-1"></div>
                     <div class="card-description" data-i18n="service-3-2"></div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <div class="card-header" data-i18n="service-4-1"></div>
                     <div class="card-description" data-i18n="service-4-2"></div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <div class="card-header" data-i18n="service-5-1"></div>
                     <div class="card-description" data-i18n="service-5-2"></div>
                 </div>
             </div>
         </div>
+        <div id="realizations" class="section-4">
+            <h1 class="title-4 red-gradient" data-i18n="s4-title"></h1>
+            <div class="images-box"></div>
+        </div>
+        <div id="contacts" class="section-3">
+            <div class="info">
+                <h1 data-i18n="s3-title" class="red-gradient"></h1>
+                <p data-i18n="s3-description" class="gray-gradient">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis possimus vitae iusto molestiae recusandae similique alias perspiciatis impedit, quibusdam distinctio autem corporis blanditiis est facilis, maxime accusantium tenetur nihil!</p>
+                <a class="s3-btn red-gradient external" onclick="window.open('tel:+48788667311')">+48 788-667-311</a>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40293.30357187794!2d20.677456499999998!3d50.8620629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47182739977ad9c7%3A0x5754d37f9cafda67!2sAutoProDetail%20-%20Studio%20Kosmetyki%20Samochodowej%20%7C%20Kielce!5e0!3m2!1sru!2spl!4v1731870791445!5m2!1sru!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
     </section>
     <footer>
-        <div class="logo-footer">
-            <img src="media/logo1.png" alt="logo">
+        <div class="block-1">
+            <img class="footer-logo" src="media/logo.png" alt="logo">
+            <h2 style="" class="red-gradient" data-i18n="footer-text-1"></h2>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/1GsP7RBh1R/" target="_blank" class="social-media-icon">
+                    <img src="media/facebook.png" alt="facebook-icon">
+                </a>
+                <a href="https://www.instagram.com/autoprodetailkielce?igsh=MTJzY3lycWkwN21wMw==" target="_blank" class="social-media-icon">
+                    <img src="media/instagram.png" alt="instagram-icon">
+                </a>
+                <a href="https://www.tiktok.com/@autoprodetail4?_t=8ryIzotXf4q&_r=1" target="_blank" class="social-media-icon">
+                    <img src="media/tik-tok.png" alt="tiktok-icon">
+                </a>
+            </div>
         </div>
-        <p data-i18n="footer-description" class="footer-description" style="color: white;"></p>
-        <div class="social-media-footer">
-            <a href="https://facebook.com" target="_blank" class="social-media-icon">
-                <img src="media/facebook.png" alt="facebook-icon">
-            </a>
-            <a href="https://instagram.com" target="_blank" class="social-media-icon">
-                <img src="media/instagram.png" alt="instagram-icon">
-            </a>
-            <a href="https://tiktok.com" target="_blank" class="social-media-icon">
-                <img src="media/tik-tok.png" alt="tiktok-icon">
-            </a>
+        <div class="block-2">
+            <div>
+                <h2 class="red-gradient">Auto Pro Detail</h2>
+                <h3 class="gray-gradient">Ul. Sandomierska 318A<br>25-330, Kielce</h3>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <p>©2024-2025 Auto Pro Detail. All rights reserved.</p>
+        <div class="block-3">
+            <h2 data-i18n="menu-2" class="red-gradient"></h2>
+            <h3 class="gray-gradient" data-i18n="service-1-1"></h3>
+            <h3 class="gray-gradient" data-i18n="service-2-1"></h3>
+            <h3 class="gray-gradient" data-i18n="service-3-1"></h3>
+            <h3 class="gray-gradient" data-i18n="service-4-1"></h3>
+            <h3 class="gray-gradient" data-i18n="service-5-1"></h3>
+        </div>
+        <div class="menu-footer">
+            <h2 class="red-gradient" data-i18n="footer-text-3"></h2>
+            <a data-i18n="menu-1" href="#start"></a>
+            <a class="gray-gradient" data-i18n="menu-2" href="#services"></a>
+            <a class="gray-gradient" data-i18n="menu-3" href="#realizations"></a>
+            <a class="gray-gradient" data-i18n="menu-5" href="#contacts"></a>
         </div>
     </footer>
+    <div class="privacy-rulls">
+        <p>©2024-2025 Auto Pro Detail. All rights reserved.</p>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -24,9 +24,10 @@ header {
     background-color: black;
     height: 80px;
     padding: 0 20px;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -43,6 +44,16 @@ header {
     margin: 0 auto;
 }
 
+.menu-toggle {
+    display: none;
+    flex: 1;
+    text-align: right;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -50,8 +61,11 @@ header {
     flex: 2;
 }
 
+.menu .lang{
+    display: none;
+}
+
 .contacts{
-    color: white;
     display: flex;
     flex-flow: column;
     flex: 0.5;
@@ -83,53 +97,9 @@ header {
     cursor: pointer;
 }
 
-footer {
-    width: 100%;
-    height: fit-content;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 10px;
-}
-
-.logo-footer img {
-    height: 40px;
-}
-
-.social-media-footer {
-    display: flex;
-    gap: 10px;
-}
-
-.social-media-footer img {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-}
-
-.social-media-footer a {
-    width: 40px;
-    height: 40px;
-    border-radius: 15px;
-}
-
-.footer-bottom{
-    background-color: black;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    color: var(--light-gray);
-    line-height: 100%;
-}
-
-header a {
+header a{
     text-decoration: none;
     padding: 10px;
-    /* border: 1px solid var(--grey);
-    border-radius: 10%; */
     color: var(--light-gray);
     transition: color 0.5s;
 }
@@ -139,24 +109,14 @@ a:hover {
 }
 
 .main{
-    margin-top: 80px;
     height: fit-content;
     text-align: center;
-    
-}
-
-.section-1 h2, .section-1 h3{
-    margin: 0 auto;
-    padding: 15px;
-    font-size: 350%;
-    max-width: 45%;
 }
 
 .section-1{
-    margin-top: 80px;
     padding-top: 150px;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),    
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
         url(media/deteiling_audi1.jpg);
     background-size: cover; /* Подгоняет изображение под размер блока, сохраняя пропорции */
     background-repeat: no-repeat;
@@ -167,12 +127,14 @@ a:hover {
 
 
 .title-1{
-    color: white;
-    font-size: 600% !important;
+    font-size: 600%;
 }
 
 .section-1 h3{
     font-size: 250%;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 45%;
 }
 
 .gray-gradient{
@@ -201,7 +163,6 @@ a:hover {
     width: 100%;
     justify-content: center;
     gap: 20px;
-    vertical-align: center;
     margin-top: 20px;
 }
 
@@ -212,7 +173,7 @@ a:hover {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    width: 7%;
+    width: 100px;
     height: 50px;
     font-size: 120%;
     font-weight: 550;
@@ -221,7 +182,7 @@ a:hover {
 }
 
 .s1-btn:hover{
-    width: 7.2%;
+    transform: scale(1.05, 1);
 }
 
 .s1-btn-1{
@@ -235,12 +196,15 @@ a:hover {
 }
 
 .section-2{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     background-image: linear-gradient(#010101 10%, black);
 }
 
-.s2-title{
+.title-2{
     padding-top: 25px;
     font-size: 250%;
 }
@@ -272,22 +236,9 @@ a:hover {
     background-image: linear-gradient(to bottom, var(--red), var(--dark-red));
     color: white;
     font-weight: bold;
-    cursor: pointer;
     text-align: center;
     border-bottom: 2px solid var(--dark-red);
-    position: relative;
     height: fit-content;
-}
-
-.card-header::after {
-    content: '\2193'; /* Unicode стрелка вниз */
-    font-size: 18px;
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
 }
 
 .card-header.active::after {
@@ -295,12 +246,319 @@ a:hover {
 }
 
 .card-description {
-    display: none;
     padding: 15px;
     background-color: var(--light-gray);
     color: var(--dark-gray);
 }
 
-.card.active .card-description {
+.card.active{
     display: block;
+}
+
+.section-3{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 80vh;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)),
+        url(media/audi-deteiling.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-3 .info{
+    width: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+    gap: 15px;
+}
+
+.section-3 .info h1{
+    font-size: 200%;
+}
+
+.section-3 .info p{
+    font-size: 130%;
+}
+
+.s3-btn{
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-size: 150%;
+    font-weight: 550;
+    transition: color 0.3s ease;
+    background-color: #484848;
+}
+
+.map{
+    width: 40%;
+    height: 80%;
+}
+
+.map iframe{
+    height: 100%;
+    width: 100%;
+    /* border: 0; */
+    box-shadow: 2px 2px var(--dark-gray);
+    border-radius: 10px;
+}
+
+.section-4{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10%;
+    width: 100%;
+    height: fit-content;
+    background-image: linear-gradient(#010101 10%, black);
+}
+
+.title-4{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 250%;
+}
+
+.images-box{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    row-gap: 15px;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.image-box{
+    width: clamp(300px, 18%, 400px);
+}
+
+.image-box:hover{
+    transform: scale(1.03);
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 5px;
+    /* border: 1px solid var(--dark-red); */
+    box-shadow: 2px 2px var(--dark-red);
+}
+
+footer {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: start;
+    justify-content: center;
+    gap: max(25px, 10vw);
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: 30vh;
+}
+
+.block-1{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100%;
+}
+
+.block-2{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    height: 100%;
+}
+
+.footer-logo{
+    width: max(200px, 15vw);
+}
+
+.social-media {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.social-media a {
+    /* width: 40px;
+    height: 40px; */
+    width: max(30px, 2vw);
+    width: max(30px, 2vw);
+    border-radius: 15px;
+}
+
+.block-3{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu-footer{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu-footer a{
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: var(--light-gray);
+    transition: color 0.5s;
+    font-size: clamp(12px, 1vw, 22px);
+}
+
+.menu-footer a:hover{
+    color: var(--red);
+}
+
+.privacy-rulls{
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: var(--light-gray);
+    line-height: 100%;
+}
+
+footer h2{
+    font-size: clamp(12px, 2.8vw, 25px);
+}
+
+footer h3{
+    font-size: clamp(12px, 1.7vw, 18px);
+}
+
+/* @media */
+@media (max-width: 1200px) {
+    header .contacts{
+        display: none;
+    }
+    .section-1{
+        height: 60vh;
+    }
+    .section-2{
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    header .contacts{
+        display: none;
+    }
+    header .logo{
+        flex: 1;
+    }
+    header .menu .lang{
+        display: block;
+        display: flex;
+        gap: 20px;
+    }
+    header .lang{
+        display: none;
+    }
+    header .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 80px);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+    header .menu.active {
+        display: flex;
+    }
+    header .menu-toggle{
+        display: block;
+        color: white;
+    }
+    .section-1 .s1-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-1{
+        height: 100vh;
+    }
+    .section-1 .title-1{
+        font-size: 50px;
+    }
+    .section-1 h3{
+        font-size: 25px;
+    }
+    .section-2{
+        height: fit-content;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .section-2 .title-2{
+        font-size: 28px;
+    }
+    .section-2 .card-container {
+        flex-flow: column wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        height: fit-content;
+        font-size: 15px;
+    }
+    .section-3{
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 5%;
+    }
+    .section-3 p{
+        display: none;
+    }
+    .section-3 .info{
+        font-size: 12px;
+        width: 100%;
+        flex: 1;
+    }
+    .section-3 .map{
+        width: 100%;
+        flex: 3;
+    }
+    footer{
+        height: fit-content;
+    }
+    footer .block-2, footer .block-3, footer .menu-footer{
+        display: none;
+    }
+    footer .block-1{
+        gap: 5px;
+    }
+    footer .block-1 h2{
+        font-size: 20px;
+        padding: 0;
+    }
+    footer .social-media a{
+        width: 35px;
+        height: 35px;
+    }
 }

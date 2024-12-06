@@ -1,25 +1,46 @@
 async function setLanguage(language) {
-    // Загрузить файл перевода
+  // Загрузить файл перевода
     
-    const response = await fetch(`translations/${language}.json`);
-    const translations = await response.json();
+  const response = await fetch(`translations/${language}.json`);
+  const translations = await response.json();
 
     // Найти все элементы с data-i18n и обновить их текст
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.getAttribute("data-i18n");
-      element.textContent = translations[key];
-    });
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    element.textContent = translations[key];
+  });
   
-    if(language == 'ua')
-    {
-      document.documentElement.lang = 'uk'
-    }
-    else{
-      document.documentElement.lang = language
-    }
-
-    document.cookie = `language=${language}`
+  if(language == 'ua')
+  {
+    document.documentElement.lang = 'uk'
   }
+  else{
+    document.documentElement.lang = language
+  }
+  document.cookie = `language=${language}`
+}
+
+let images_box = document.querySelector('.images-box');
+
+async function loadRealizations() {
+  const response = await fetch(`media/realizations/realizations.json`);
+
+  const realizations = await response.json();
+  
+  realizations.forEach((element) => {
+    const div = document.createElement('div');
+    div.classList += 'image-box';
+    const img = document.createElement('img');
+    img.src = 'media/realizations/' + element;
+    div.appendChild(img);
+    images_box.appendChild(div);
+  })
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+}
 
 const cookies = document.cookie.split('; ')
   
@@ -31,21 +52,6 @@ else{
     setLanguage('pl');
 }
 
-function toggleCard(event) {
-  const cardHeader = event.currentTarget;
-  const card = cardHeader.closest('.card');
-  
-  // const allCards = document.querySelectorAll('.card');
-  // allCards.forEach((otherCard) => {
-  //     if (otherCard !== card) {
-  //         otherCard.classList.remove('active');
-  //     }
-  // });
+loadRealizations();
 
-  card.classList.toggle('active');
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const cardHeaders = document.querySelectorAll('.card-header');
-  cardHeaders.forEach(header => header.addEventListener('click', toggleCard));
-});
