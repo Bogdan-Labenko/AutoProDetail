@@ -452,10 +452,12 @@ footer h3{
         display: none;
     }
     .section-1{
-        height: 60vh;
+        height: 100vh;
     }
     .section-2{
-        height: 60vh;
+        height: fit-content;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 }
 
