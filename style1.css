@@ -359,7 +359,7 @@ footer {
     background-color: black;
     display: flex;
     flex-flow: row nowrap;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     gap: max(25px, 10vw);
     padding-top: 10px;
@@ -378,6 +378,7 @@ footer {
 .block-2{
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
     gap: 30px;
     height: 100%;
 }
@@ -422,7 +423,8 @@ footer {
     margin-bottom: 5px;
     color: var(--light-gray);
     transition: color 0.5s;
-    font-size: clamp(12px, 1vw, 22px);
+    /* font-size: clamp(12px, 1vw, 22px); */
+    font-size: 17px;
 }
 
 .menu-footer a:hover{
